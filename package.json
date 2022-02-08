@@ -1,5 +1,15 @@
 {
+  "name": "svelte-typescript-web-bootstrap",
+  "version": "0.1.0",
+  "author": {
+    "name": "Clare Kang",
+    "email": "clare.mk.kang@gmail.com"
+  },
   "scripts": {
+    "format": "prettier --write --plugin-search-dir=. ./src/**/*.{svelte,ts}",
+    "lint": "eslint './src/**/*.{js,ts,svelte}'",
+    "lint:fix": "eslint --fix './src/**/*.{js,ts,svelte}'",
+    "prelint": "npm run format",
     "start": "snowpack dev",
     "build": "snowpack build",
     "test": "web-test-runner \"src/**/*.test.ts\""
@@ -8,6 +18,8 @@
     "svelte": "^3.37.0"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.16.5",
+    "@rollup/plugin-alias": "^3.1.9",
     "@snowpack/plugin-dotenv": "^2.2.0",
     "@snowpack/plugin-svelte": "^3.6.1",
     "@snowpack/plugin-typescript": "^1.2.1",
@@ -16,11 +28,29 @@
     "@tsconfig/svelte": "^1.0.10",
     "@types/chai": "^4.2.17",
     "@types/mocha": "^8.2.2",
+    "@types/query-string": "^6.3.0",
     "@types/snowpack-env": "^2.3.3",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "@typescript-eslint/types": "^4.2.0",
     "@web/test-runner": "^0.13.3",
     "chai": "^4.3.4",
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-import-helpers": "^1.0.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "postinstall": "^0.7.4",
+    "prettier": "^2.5.1",
+    "prettier-plugin-svelte": "^2.5.1",
+    "query-string": "^7.1.0",
     "snowpack": "^3.8.7",
     "svelte-preprocess": "^4.7.2",
     "typescript": "^4.3.4"
-  }
+  },
+  "eslint.validate": [
+    "svelte"
+  ]
 }
