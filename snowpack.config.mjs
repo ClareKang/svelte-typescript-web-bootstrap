@@ -1,5 +1,12 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
+import { createRequire } from "module";
+const requireCommand = createRequire(import.meta.url);
+const pkg = requireCommand("./package.json");
+
 export default {
+  env: {
+    PACKAGE_VERSION: pkg.version,
+  },
   mount: {
     public: { url: "/", static: true },
     src: { url: "/dist" },

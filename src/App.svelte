@@ -8,6 +8,12 @@
       clearInterval(interval);
     };
   });
+
+  // DO NOT DELETE THIS CONSOLE LOG
+  console.log(
+    `%Svelte Web [${import.meta.env.MODE}] v${import.meta.env.PACKAGE_VERSION}`,
+    "font-size: 16px; color: #0d7eab; background-color: #000; padding: 2px 5px;",
+  );
 </script>
 
 <div class="App">
